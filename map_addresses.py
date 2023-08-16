@@ -1,8 +1,10 @@
+import os
 import csv
 import requests
 import pandas as pd
 
-api_key = "AIzaSyAuGNXnlxcre8CWidwQK6vC2mDdwL9nWwM"
+
+api_key = os.environ.get('GCP_API')
 search_query = "highways in California"
 
 url = f"https://maps.googleapis.com/maps/api/place/textsearch/json?query={search_query}&key={api_key}"
